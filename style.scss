@@ -1,12 +1,12 @@
 :root {
     // COLORS
-    --Soft-blue: hsl(215, 51%, 70%);
-    --Cyan: hsl(178, 100%, 50%);
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
 
-    --Very-dark-blue: hsl(217, 54%, 11%); //(main BG)
-    --Very-dark-blue: hsl(216, 50%, 16%); //(card BG)
-    --Very-dark-blue: hsl(215, 32%, 27%); //(line)
-    --White: hsl(0, 0%, 100%);
+    --dark-blue-1: hsl(217, 54%, 11%); //(main BG)
+    --dark-blue-2: hsl(216, 50%, 16%); //(card BG)
+    --dark-blue-3: hsl(215, 32%, 27%); //(line)
+    --white: hsl(0, 0%, 100%);
 
     // FONT
     --ff-outfit: "Outfit", sans-serif;
@@ -15,8 +15,16 @@
     --fw-300: 300;
     --fw-400: 400;
     --fw-600: 600;
+
+    --gap: 1rem;
+
+    --card-width: 350px;
+    --card-padding: 24px;
+    --card-radius: 15px; // -> 14px
+    --img-radius: 7px; // -> 5px
 }
 
+// simple reset
 *,
 *::before,
 *::after {
@@ -26,19 +34,26 @@
     font: inherit;
 }
 
+// general styling
 body {
     font-size: var(--fs-18);
+    background-color: var(--dark-blue-1);
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+// card
 .card {
-    background-color: #14273E;
-    border-radius: 15px;
-    padding: 20px;
-    max-width: 300px;
-    margin: 20px auto;
-    color: #FFFFFF;
+    background-color: var(--dark-blue-2);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    max-width: var(--card-width);
+
+    color: var(--white);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .card__image {
