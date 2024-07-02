@@ -1,0 +1,88 @@
+:root {
+    // COLORS
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --Very-dark-blue: hsl(217, 54%, 11%); //(main BG)
+    --Very-dark-blue: hsl(216, 50%, 16%); //(card BG)
+    --Very-dark-blue: hsl(215, 32%, 27%); //(line)
+    --White: hsl(0, 0%, 100%);
+
+    // FONT
+    --ff-outfit: "Outfit", sans-serif;
+    --fs-18: 18px;
+    --fs-32: 32px;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    font-size: var(--fs-18);
+}
+
+.card {
+    background-color: #14273E;
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px auto;
+    color: #FFFFFF;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card__description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #B8C1EC;
+}
+
+.card__details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card__price,
+.card__time {
+    color: #FFFFFF;
+}
+
+.card__creator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__creator-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card__creator-link {
+    color: #00FFAB;
+    text-decoration: none;
+}
