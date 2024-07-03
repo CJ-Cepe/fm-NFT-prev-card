@@ -61,6 +61,7 @@ body {
 
     color: var(--white);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); //
+
 }
 
 .card__image-wrapper {
@@ -102,12 +103,10 @@ body {
     /* object-fit: c; */
 }
 
-
-
-
 .card__title {
     font-size: var(--fs-22);
     font-weight: var(--fw-600);
+    transition: color 0.2s ease-in-out;
 }
 
 .card__description {
@@ -169,6 +168,7 @@ hr {
     font-size: var(--fs-16);
     margin-top: 1em;
     margin-bottom: 0.5em;
+
 }
 
 .card__creator-avatar {
@@ -186,6 +186,7 @@ hr {
 .card__creator-link {
     --white: hsla(0, 0%, 100%);
     color: var(--white);
+    transition: color 0.2s ease-in-out;
 }
 
 // utilities
