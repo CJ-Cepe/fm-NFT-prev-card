@@ -7,7 +7,7 @@
     --dark-blue-2: hsl(216, 50%, 16%); //(card BG)
     --dark-blue-3: hsl(215, 32%, 27%); //(line)
     --white: hsl(0, 0%, 100%);
-    --white2: #8BACD9;
+    --white2: hsl(215, 51%, 70%);
 
     // FONT
     --ff-outfit: "Outfit", sans-serif;
@@ -23,13 +23,12 @@
 
     --card-width: 350px;
     --card-padding: 24px;
-    --card-radius: clamp(0.875rem, 4vw + -0.0625rem, 0.9375rem); // 15px; // -> 14px
-    --img-radius: clamp(0.3125rem, 8vw + -1.5625rem, 0.4375rem); // 7px; // -> 5px
+    --card-radius: clamp(0.875rem, 4vw + -0.0625rem, 0.9375rem);
+    --img-radius: clamp(0.3125rem, 8vw + -1.5625rem, 0.4375rem);
 
     --avatar-sz: 33px;
 }
 
-// simple reset
 *,
 *::before,
 *::after {
@@ -39,7 +38,6 @@
     font: inherit;
 }
 
-// general styling
 body {
     font-size: var(--fs-18);
     font-family: var(--ff-outfit);
@@ -79,9 +77,8 @@ body {
     border-radius: var(--img-radius);
     cursor: pointer;
 
-    //!!!!
     @media (max-width: 400px) {
-        margin-bottom: 1.309em; //??
+        margin-bottom: 1.309em;
     }
 
     &::after {
@@ -122,15 +119,14 @@ body {
 
 .card__description {
     color: var(--white2);
-    font-weight: var(--fw-300); //
+    font-weight: var(--fw-300);
     line-height: var(--lh-15);
-    margin-top: 0.7em; // ???
+    margin-top: 0.7em;
     margin-bottom: 1.2em;
 
-    //!!!!
     @media (max-width: 400px) {
         margin-top: 0.6em;
-        margin-bottom: 0.95em; //??
+        margin-bottom: 0.95em;
         --lh-15: 1.62;
     }
 }
@@ -140,9 +136,8 @@ body {
 .card__details {
     display: flex;
     font-size: var(--fs-16);
-    margin-bottom: 1.461em; //??
+    margin-bottom: 1.461em;
 
-    //!!!!
     @media (max-width: 400px) {
         margin-bottom: 0.95em;
     }
@@ -153,7 +148,7 @@ body {
     flex-grow: 1;
     display: flex;
     align-items: center;
-    gap: 7px; //
+    gap: 7px;
 }
 
 .card__time {
@@ -183,14 +178,12 @@ body {
     }
 }
 
-// hr
 hr {
     height: 0px;
     border: none;
     box-shadow: 0 0 0 0.15px var(--white2);
 }
 
-// ------- creator 
 .card__creator {
     display: flex;
     align-items: center;
@@ -199,7 +192,6 @@ hr {
     margin-top: 1em;
     margin-bottom: 0.5em;
 
-    //!!!!
     @media (max-width: 400px) {
         margin-top: 1.1em;
         margin-bottom: 0em;
@@ -232,8 +224,6 @@ hr {
     }
 
 }
-
-// utilities
 
 .yeah:hover {
     color: var(--cyan);
