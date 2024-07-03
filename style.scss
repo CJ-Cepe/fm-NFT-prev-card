@@ -3,7 +3,7 @@
     --soft-blue: hsl(215, 51%, 70%);
     --cyan: hsl(178, 100%, 50%);
 
-    --dark-blue-1: hsl(217, 54%, 11%); //(main BG)
+    --dark-blue-1: hsl(216, 55%, 11%); //(main BG)
     --dark-blue-2: hsl(216, 50%, 16%); //(card BG)
     --dark-blue-3: hsl(215, 32%, 27%); //(line)
     --white: hsl(0, 0%, 100%);
@@ -51,23 +51,29 @@ body {
     align-items: center;
     justify-content: center;
     padding: var(--card-padding);
+    min-width: 240px;
 }
 
 // card
 .card {
+    --dark-blue-4: hsl(217, 55%, 10%, 0.5);
+    --dark-blue-5: hsl(216, 57%, 11%);
     background-color: var(--dark-blue-2);
     border-radius: var(--card-radius);
     padding: var(--card-padding);
     max-width: var(--card-width);
 
     color: var(--white);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); //
+    min-width: 233px;
 
+    box-shadow: 0 30px 5px 20px var(--dark-blue-4),
+        0 30px 5px 50px var(--dark-blue-5);
 }
 
 .card__image-wrapper {
     margin-bottom: 1.26em;
     max-height: 302px;
+    aspect-ratio: 1;
     overflow: hidden;
     position: relative;
     border-radius: var(--img-radius);
@@ -75,7 +81,7 @@ body {
 
     //!!!!
     @media (max-width: 400px) {
-        margin-bottom: 0.95em;
+        margin-bottom: 1.309em; //??
     }
 
     &::after {
@@ -106,7 +112,6 @@ body {
 .card__image {
     width: 100%;
     border-radius: var(--img-radius);
-    /* object-fit: c; */
 }
 
 .card__title {
@@ -140,7 +145,6 @@ body {
     //!!!!
     @media (max-width: 400px) {
         margin-bottom: 0.95em;
-        /* letter-spacing: -1%; */
     }
 }
 
