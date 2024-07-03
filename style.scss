@@ -7,6 +7,7 @@
     --dark-blue-2: hsl(216, 50%, 16%); //(card BG)
     --dark-blue-3: hsl(215, 32%, 27%); //(line)
     --white: hsl(0, 0%, 100%);
+    --white2: hsl(216, 27%, 59%);
 
     // FONT
     --ff-outfit: "Outfit", sans-serif;
@@ -16,8 +17,9 @@
     --fw-300: 300;
     --fw-400: 400;
     --fw-600: 600;
+    --lh-15: 1.47;
 
-    --gap: 1rem;
+    --gap: 20px;
 
     --card-width: 350px;
     --card-padding: 24px;
@@ -41,6 +43,7 @@
 body {
     font-size: var(--fs-18);
     font-family: var(--ff-outfit);
+    line-height: var(--lh-15);
     background-color: var(--dark-blue-1);
     min-height: 100vh;
 
@@ -57,51 +60,101 @@ body {
     max-width: var(--card-width);
 
     color: var(--white);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); //
 }
 
 .card__image {
     width: 100%;
     border-radius: var(--img-radius);
     object-fit: contain;
+    margin-bottom: 0.9em;
 }
 
 .card__title {
     font-size: var(--fs-22);
+    font-weight: var(--fw-600);
 }
 
 .card__description {
-    opacity: 0.8;
+    color: var(--white2);
+    font-weight: var(--fw-300); //
+    line-height: var(--lh-15);
+    margin-top: 0.8em;
+    margin-bottom: 1.2em;
 }
 
+
+// ------- details 
 .card__details {
     display: flex;
-    justify-content: space-between;
+    font-size: var(--fs-16);
+    margin-bottom: 1.35em;
 }
 
 .card__price,
 .card__time {
-    color: #FFFFFF;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 7px; //
 }
 
+.card__time {
+    color: var(--white2);
+    justify-content: end;
+    margin-right: 2px;
+}
+
+.card__price-value {
+    font-weight: var(--fw-600);
+    color: var(--cyan);
+}
+
+.card__price-icon,
+.card__time-icon {
+    height: 75%;
+}
+
+.card__time-icon {
+    height: 70%;
+}
+
+// hr
+hr {
+    height: 0px;
+    border: none;
+    box-shadow: 0 0 0 0.15px var(--white2);
+}
+
+// ------- creator 
 .card__creator {
     display: flex;
     align-items: center;
+    gap: 16px;
+    font-size: var(--fs-16);
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
 .card__creator-avatar {
-    width: 30px;
-    height: 30px;
+    width: var(--avatar-sz);
+    aspect-ratio: 1;
     border-radius: 50%;
     border: solid 1px var(--white);
 }
 
 .card__creator-by {
-    --white: hsla(0, 0%, 100%, 0.7);
-    color: var(--white);
+    --white: hsla(0, 0%, 100%, 0.6);
+    color: var(--white2);
 }
 
 .card__creator-link {
     --white: hsla(0, 0%, 100%);
     color: var(--white);
+}
+
+// utilities
+
+.yeah:hover {
+    color: var(--cyan);
 }
